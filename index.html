@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0a12">
+  <meta name="description" content="依情緒與聆聽情境探索個人選曲和 AI 推薦。">
+  <title>Mood Frequency｜情緒探索與個人音樂策展</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="./" aria-label="Mood Frequency 首頁">
+        <span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span>Mood <strong>Frequency</strong></span>
+      </a>
+      <nav aria-label="主要導覽">
+        <a href="#moods">情緒探索</a>
+        <a href="#songs">所有歌曲</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-disc"></div>
+        <div class="hero-orbit"></div>
+        <div class="hero-orbit hero-orbit--outer"></div>
+        <div class="hero-cross hero-cross--top">+</div>
+        <div class="hero-cross hero-cross--bottom">+</div>
+      </div>
+      <div class="hero-copy">
+        <h1 id="hero-title">Mood<br><em>Frequency</em></h1>
+        <p>跟著心情，在個人選曲與 AI 推薦中找到此刻想聽的音樂。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#moods">開始探索 <span aria-hidden="true">↘</span></a>
+          <button class="button button-secondary" id="random-song" type="button" disabled><span aria-hidden="true">⤨</span> 隨機探索</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="moods" aria-labelledby="moods-title">
+      <div class="section-heading">
+        <div><p class="section-kicker" lang="en">EXPLORE BY MOOD</p><h2 id="moods-title">你現在的心情是？</h2></div>
+      </div>
+      <div class="mood-grid" id="mood-grid" role="group" aria-label="依情緒篩選歌曲"></div>
+    </section>
+
+    <section class="section song-section" id="songs" aria-labelledby="songs-title" aria-busy="true">
+      <div class="section-heading song-heading">
+        <div><h2 id="songs-title" tabindex="-1">策展收藏</h2></div>
+        <div class="collection-filters">
+          <label for="scene-filter">聆聽情境</label>
+          <select class="button button-secondary" id="scene-filter" aria-controls="song-grid" disabled>
+            <option value="">所有情境</option>
+          </select>
+          <button type="button" class="button button-secondary" id="show-all" aria-pressed="true" disabled>查看全部</button>
+        </div>
+      </div>
+      <p class="demo-notice" id="demo-notice" hidden>目前曲目皆為示範資料。</p>
+      <p class="results-status" id="results-status" role="status">正在載入歌曲與情緒…</p>
+      <button type="button" class="button button-secondary" id="retry-load" hidden>重新載入</button>
+      <div class="song-grid" id="song-grid"></div>
+    </section>
+    <noscript><p>請啟用 JavaScript 以載入情緒和歌曲。</p></noscript>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><span>Mood Frequency</span><a href="#main">回到頂端 ↑</a></div></footer>
+
+  <dialog id="song-dialog" aria-labelledby="detail-title">
+    <div class="dialog-frame">
+      <form method="dialog" class="dialog-controls">
+        <button id="detail-back" class="button button-secondary" type="button" hidden>← 上一首詳情</button>
+        <button class="close-button" aria-label="關閉歌曲詳情" autofocus>×</button>
+      </form>
+      <div id="song-detail"></div>
+    </div>
+  </dialog>
+
+  <template id="song-card-template">
+    <article class="song-card">
+      <button class="song-button" type="button">
+        <span class="song-art" aria-hidden="true"></span>
+        <span class="song-info">
+          <span class="song-main"><span class="song-title"></span><span class="song-arrow" aria-hidden="true">↗</span></span>
+          <span class="song-artist"></span>
+          <span class="song-source" lang="en"></span>
+          <span class="song-tags"></span>
+        </span>
+      </button>
+    </article>
+  </template>
+</body>
+</html>

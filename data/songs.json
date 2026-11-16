@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sza-snooze",
+    "title": "Snooze",
+    "artist": "SZA",
+    "year": 2022,
+    "genres": [
+      "當代 R&B"
+    ],
+    "moods": [
+      "chill",
+      "dreamy"
+    ],
+    "listeningScenes": [
+      "安靜獨處",
+      "夜晚散步"
+    ],
+    "description": "柔和的吉他樂句反覆穿過鼓點，低音讓節奏帶著輕輕搖晃的律動。SZA 的唱腔貼近耳邊，句尾自然拉長，後方的和聲讓旋律聽來更柔和。",
+    "recommendation": "適合安靜獨處或夜晚散步時聽。平穩的拍點讓腳步慢下來，吉他和層疊和聲則讓整首歌保有輕盈的流動感。",
+    "personalNote": "我很喜歡這首歌悠閒、鬆弛的 R&B 氛圍。",
+    "source": "user",
+    "status": "approved",
+    "image": null,
+    "listenUrl": "https://www.youtube.com/watch?v=LDY_XyxBu8A"
+  }
+]

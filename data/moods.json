@@ -1,0 +1,8 @@
+[
+  {"id":"chill","name":"放空","description":"把步調放慢一點。","color":"#8cc9ff","background":"#192d47"},
+  {"id":"hype","name":"興奮","description":"讓節奏把你帶走。","color":"#ff9b8c","background":"#422332"},
+  {"id":"nostalgic","name":"懷舊","description":"回到某個熟悉的瞬間。","color":"#ffcf88","background":"#3e2b25"},
+  {"id":"melancholic","name":"憂鬱","description":"讓低潮有個停留的地方。","color":"#a9b8ff","background":"#252746"},
+  {"id":"confident","name":"自信","description":"走出自己的步伐。","color":"#f5a2d8","background":"#42233e"},
+  {"id":"dreamy","name":"夢幻","description":"暫時漂離日常。","color":"#c8a5ff","background":"#33234e"}
+]
